@@ -5,6 +5,8 @@ import UserLogin from '@/pages/UserLogin'
 import UserRegistration from '@/pages/UserRegistration'
 import CompanyLogin from '@/pages/CompanyLogin'
 import CompanyRegistration from '@/pages/CompanyRegistration'
+import Dashboard from '@/pages/Dashboard'
+
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +35,11 @@ export default new Router({
       path: '/company_registration',
       name: 'company_registration',
       component: CompanyRegistration
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: Dashboard
     }
   ]
 })

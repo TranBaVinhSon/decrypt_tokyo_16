@@ -1,16 +1,42 @@
 <template lang="html">
-<div>
-  <div>
-    <p>Name</p>
-    <input class="input has-text-light" type="text" placeholder="Name input">
-    <p>From</p>
-    <input class="input" type="text" placeholder="From input">
-    <p>To</p>
-    <input class="input" type="text" placeholder="To input">
-    <p>Line</p>
-    <input class="input" type="text" placeholder="Line input">
+
+<div class="columns">
+  <div class="column is-half is-offset-one-quarter responsive-column">
+  <div class="columns">
+    <div class="column">
+      <p>Name</p>
+    </div>
+    <div class="column">
+      <input class="input has-text-light" type="text" placeholder="Name input">
+    </div>
   </div>
-    <a class="button is-outlined is-large">Submit</a>
+  <div class="columns">
+    <div class="column">
+      <p>From</p>
+    </div>
+    <div class="column">
+      <input class="input" type="text" placeholder="From input">
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <p>To</p>
+    </div>
+    <div class="column">
+      <input class="input" type="text" placeholder="To input">
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <p>Line</p>
+    </div>
+    <div class="column">
+      <input class="input" type="text" placeholder="Line input">
+    </div>
+    </div>
+    <a href="#" class="button is-outlined is-large">Register</a>
+
+  </div>
 </div>
 </template>
 
@@ -21,4 +47,5 @@ export default {
 </script>
 
 <style lang="css">
+
 </style>

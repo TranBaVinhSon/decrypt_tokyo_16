@@ -6,6 +6,12 @@
     <router-link tag="li" to="/user_registration">
       <a>/user_registration</a>
     </router-link>
+    <router-link tag="li" to="/company_login">
+      <a>/company_login</a>
+    </router-link>
+    <router-link tag="li" to="/company_registration">
+      <a>/company_registration</a>
+    </router-link>
   </div>
 </template>
 

@@ -53,19 +53,21 @@
       <div class="list-result is-flex">
         <div class="is-flex time">
           <div class="time-moving">
-            18:00 -> 19:00
+            18:00 -> 18:30
           </div>
-          <span class="tag is-light">30p</span>
+          <span class="tag is-light">30 minutes</span>
         </div>
-        <div class="line">
-          <span class="tag is-warning is-medium">Chuo Line</span>
+        <div class="line is-flex">
+          <span class="tag is-warning is-normal">Chuo-Sobu Line</span>
+          <p> >> </p>
+          <span class="tag is-danger is-normal">Chuo Line</span>
         </div>
         <div class="price is-flex">
           <div class="yen-price">
-            200 yen
+            250 yen
           </div>
           <div class="token">
-            0.05 ETH
+            20 JRC
           </div>
         </div>
         <div class="">
@@ -76,19 +78,19 @@
       <div class="list-result is-flex">
         <div class="is-flex time">
           <div class="time-moving">
-            18:00 -> 19:00
+            18:00 -> 18:20
           </div>
-          <span class="tag is-light">30p</span>
+          <span class="tag is-light">20 minutes</span>
         </div>
         <div class="line">
-          <span class="tag is-warning is-medium">Chuo Line</span>
+          <span class="tag is-success is-normal">Shinjuku Line</span>
         </div>
         <div class="price is-flex">
           <div class="yen-price">
-            200 yen
+            150 yen
           </div>
           <div class="token">
-            0.1 ETH
+            5 JRC
           </div>
         </div>
         <div class="">
@@ -99,19 +101,19 @@
       <div class="list-result is-flex">
         <div class="is-flex time">
           <div class="time-moving">
-            18:00 -> 19:00
+            18:00 -> 18:15
           </div>
-          <span class="tag is-light">30p</span>
+          <span class="tag is-light">15 minutes</span>
         </div>
         <div class="line">
-          <span class="tag is-warning is-medium">Chuo Line</span>
+          <span class="tag is-warning is-normal">Chuo Line</span>
         </div>
         <div class="price is-flex">
           <div class="yen-price">
-            200 yen
+            150 yen
           </div>
           <div class="token">
-            0.2 ETH
+            0 JRC
           </div>
         </div>
         <div class="">
@@ -119,25 +121,23 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
     <div class="column map">
       <div>
-        <div>
-          <h2>Search and add a pin</h2>
-          <label>
-            <gmap-autocomplete
-              @place_changed="setPlace">
-            </gmap-autocomplete>
-            <button @click="addMarker">Add</button>
-          </label>
-          <br/>
-
+        <div class="is-flex simple-nav">
+          <div class="ranking is-flex">
+            <p style="padding-right: 5px">Ranking</p>
+            <span class="tag is-success">A</span>
+          </div>
+          <p class="balance">100 JRC</p>
+          <p class="name">Suzuki</p>
+          <img class="is-64x64 rounded-circle avatar-small" src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-512.png">
         </div>
         <br>
         <gmap-map
           :center="center"
           :zoom="12"
-          style="width:100%;  height: 500px;"
+          style="width:100%;  height: 800px;"
         >
           <gmap-marker
             :key="index"
@@ -218,6 +218,10 @@ export default {
   padding-left: 40px;
   padding-right: 40px;
 }
+.map {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
 .list-result {
   flex-direction: column;
 }
@@ -226,5 +230,29 @@ export default {
 }
 .time {
   justify-content: space-between;
+}
+
+.simple-nav {
+  align-content: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  align-items: center;
+  .ranking {
+    padding-right: 10px;
+  }
+  .balance {
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  .name {
+    padding-right: 10px;
+  }
+}
+.avatar-small {
+  width: 32px;
+  height: 32px;
+}
+.time-moving {
+  font-weight: bold;
 }
 </style>
